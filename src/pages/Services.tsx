@@ -1,4 +1,5 @@
 import FadeIn from '../components/animations/FadeIn'
+import deliveryImg from '../assets/images/delivery-logistics.jpg'
 
 const services = [
   {
@@ -83,6 +84,31 @@ export default function Services() {
               Комплексное сопровождение поставок труб и оборудования 
               для нефтегазовой отрасли
             </p>
+          </FadeIn>
+        </div>
+      </section>
+
+            {/* Фото логистики */}
+      <section className="section bg-brand-black">
+        <div className="max-w-7xl mx-auto px-4">
+          <FadeIn>
+            <div className="relative group rounded-2xl overflow-hidden border-2 border-brand-orange/30">
+              <img 
+                src={deliveryImg} 
+                alt="Доставка UM-PIPE" 
+                className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent" />
+              <div className="absolute bottom-6 left-6">
+                <h2 className="text-3xl font-bold text-brand-white">
+                  Надёжная логистика
+                </h2>
+                <p className="text-brand-white/70">
+                  Доставка по РФ и странам СНГ
+                </p>
+              </div>
+            </div>
           </FadeIn>
         </div>
       </section>

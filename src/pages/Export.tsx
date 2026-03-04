@@ -1,4 +1,5 @@
 import FadeIn from '../components/animations/FadeIn'
+import exportImg from '../assets/images/export-shipping.jpg'
 
 const countries = [
   {
@@ -74,6 +75,31 @@ export default function Export() {
               Поставки труб и оборудования для нефтегазового сектора 
               в Россию, Казахстан и Узбекистан
             </p>
+          </FadeIn>
+        </div>
+      </section>
+
+            {/* Фото экспорта */}
+      <section className="section bg-brand-black">
+        <div className="max-w-7xl mx-auto px-4">
+          <FadeIn>
+            <div className="relative group rounded-2xl overflow-hidden border-2 border-brand-orange/30">
+              <img 
+                src={exportImg} 
+                alt="Экспорт UM-PIPE" 
+                className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent" />
+              <div className="absolute bottom-6 left-6">
+                <h2 className="text-3xl font-bold text-brand-white">
+                  Экспорт в страны СНГ
+                </h2>
+                <p className="text-brand-white/70">
+                  Россия • Казахстан • Узбекистан
+                </p>
+              </div>
+            </div>
           </FadeIn>
         </div>
       </section>
