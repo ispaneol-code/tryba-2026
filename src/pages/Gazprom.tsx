@@ -1,4 +1,5 @@
 import FadeIn from '../components/animations/FadeIn'
+import gazpromImg from '../assets/images/gazprom-certificate.jpg'
 
 export default function Gazprom() {
   return (
@@ -14,6 +15,31 @@ export default function Gazprom() {
               Поставки продукции из Единого реестра материально-технических ресурсов 
               ПАО "Газпром"
             </p>
+          </FadeIn>
+        </div>
+      </section>
+
+            {/* Фото сертификатов */}
+      <section className="section bg-brand-black">
+        <div className="max-w-7xl mx-auto px-4">
+          <FadeIn>
+            <div className="relative group rounded-2xl overflow-hidden border-2 border-brand-orange/30">
+              <img 
+                src={gazpromImg} 
+                alt="Сертификаты Газпром" 
+                className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent" />
+              <div className="absolute bottom-6 left-6">
+                <h2 className="text-3xl font-bold text-brand-white">
+                  Официальный поставщик
+                </h2>
+                <p className="text-brand-white/70">
+                  Реестр МТР ПАО "Газпром"
+                </p>
+              </div>
+            </div>
           </FadeIn>
         </div>
       </section>

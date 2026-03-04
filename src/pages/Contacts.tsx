@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import FadeIn from '../components/animations/FadeIn'
 
+// Импорт изображений
+import officeImg from '../assets/images/contact-office.jpg'
+
 export default function Contacts() {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,7 +15,6 @@ export default function Contacts() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Здесь позже будет отправка на сервер
     alert('Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.')
     setFormData({ name: '', company: '', phone: '', email: '', message: '' })
   }
@@ -236,7 +238,7 @@ export default function Contacts() {
             </h2>
             
             <div className="grid lg:grid-cols-3 gap-6">
-              {/* Информация */}
+              {/* Информация + Фото */}
               <div className="lg:col-span-1 space-y-4">
                 <div className="card">
                   <h3 className="text-lg font-bold text-brand-white mb-4">
@@ -279,6 +281,16 @@ export default function Contacts() {
                       </div>
                     </div>
                   </div>
+                </div>
+
+                {/* Фото офиса */}
+                <div className="rounded-xl overflow-hidden border-2 border-brand-orange/30">
+                  <img 
+                    src={officeImg} 
+                    alt="Офис UM-PIPE" 
+                    className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
                 </div>
 
                 <a

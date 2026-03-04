@@ -1,5 +1,9 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import FadeIn from '../components/animations/FadeIn'
+
+// Импорт изображений
+import productsHeroImg from '../assets/images/pipes-products.jpg'
 
 const categories = [
   {
@@ -58,9 +62,15 @@ export default function Products() {
 
   return (
     <div className="pt-20">
-      {/* Hero */}
-      <section className="bg-brand-dark py-20">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* Hero с фото */}
+      <section className="relative bg-brand-dark py-20">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: `url(${productsHeroImg})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 to-brand-dark" />
+        
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <FadeIn>
             <h1 className="text-4xl md:text-6xl font-bold text-brand-white mb-6">
               Продукция <span className="text-brand-orange">UM-PIPE</span>
@@ -106,9 +116,9 @@ export default function Products() {
                         <h3 className="text-lg font-semibold text-brand-white mb-2">
                           {item}
                         </h3>
-                        <button className="text-brand-orange text-sm font-semibold hover:underline">
-                          Подробнее →
-                        </button>
+                        <Link to="/contacts" className="text-brand-orange text-sm font-semibold hover:underline">
+                          Узнать цену →
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -128,9 +138,9 @@ export default function Products() {
             <p className="text-xl text-brand-white/70 mb-8">
               Свяжитесь с нами, и мы подберём продукцию под ваши задачи
             </p>
-            <button className="btn-primary text-lg px-10 py-4">
+            <Link to="/contacts" className="btn-primary text-lg px-10 py-4">
               Отправить заявку
-            </button>
+            </Link>
           </FadeIn>
         </div>
       </section>
