@@ -1,6 +1,7 @@
 export const NAVIGATION = [
   { name: 'Главная', path: '/' },
   { name: 'О компании', path: '/about' },
+  { name: 'Сертификаты', path: '/certificates' },  // ← НОВАЯ ВКЛАДКА
   { name: 'Продукция', path: '/products' },
   { name: 'Услуги', path: '/services' },
   { name: 'Экспорт', path: '/export' },
@@ -9,11 +10,12 @@ export const NAVIGATION = [
 ]
 
 export const COMPANY_INFO = {
-  name: 'UM-PIPE',
-  phone: '+7 (800) 123-45-67',
-  email: 'info@um-pipe.ru',
-  address: 'г. Москва, ул. Трубопроводная, д. 1',
-  workTime: 'Пн-Пт: 9:00 - 18:00',
+  name: 'УралМет',
+  fullName: 'ООО «УралМет»',
+  phone: '+7 (343) 123-45-67',
+  email: 'info@uralmet.ru',
+  address: '620110, Свердловская область, г. Екатеринбург, ул. Краснолесья стр.12А, оф.642',
+  workTime: 'Пн-Пт: 09:00 - 18:00 (ЕКБ)',
 }
 
 export const STATS = [

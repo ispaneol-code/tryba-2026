@@ -1,11 +1,37 @@
 import { Link } from 'react-router-dom'
 import FadeIn from '../components/animations/FadeIn'
-import { STATS, ADVANTAGES } from '../utils/constants'
+import { STATS } from '../utils/constants'
 
 // Импорт изображений
 import productionImg from '../assets/images/production-facility.jpg'
 import qualityImg from '../assets/images/quality-control.jpg'
 import aboutImg from '../assets/images/about-company.jpg'
+
+// Импорт логотипов партнеров
+import partner1 from '../assets/images/partners/1.png'
+import partner2 from '../assets/images/partners/2.png'
+import partner3 from '../assets/images/partners/3.png'
+import partner4 from '../assets/images/partners/4.png'
+import partner5 from '../assets/images/partners/5.png'
+import partner6 from '../assets/images/partners/6.png'
+import partner7 from '../assets/images/partners/7.png'
+import partner8 from '../assets/images/partners/8.png'
+import partner9 from '../assets/images/partners/9.png'
+import partner10 from '../assets/images/partners/10.png'
+
+// Логотипы партнеров
+const partners = [
+  { logo: partner1, name: 'ТМК', fullName: 'Трубная Металлургическая Компания' },
+  { logo: partner2, name: 'ЧТПЗ', fullName: 'Группа ЧТПЗ' },
+  { logo: partner3, name: 'ОМК', fullName: 'Объединённая Металлургическая Компания' },
+  { logo: partner4, name: 'ТЭМПО', fullName: 'Набережночелнинский трубный завод' },
+  { logo: partner5, name: 'ИТЗ', fullName: 'Ижорский Трубный Завод' },
+  { logo: partner6, name: 'ПЗИТ', fullName: 'Первоуральский завод изоляции труб' },
+  { logo: partner7, name: 'СТИ', fullName: 'Завод Современные Технологии Изоляции' },
+  { logo: partner8, name: 'Транзит Плюс', fullName: 'Транзит Плюс' },
+  { logo: partner9, name: 'КТЗ', fullName: 'Колпинский Трубный Завод' },
+  { logo: partner10, name: 'УЗТС', fullName: 'Уральский Завод Трубопроводного Сервиса' }
+]
 
 export default function About() {
   return (
@@ -15,12 +41,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
             <h1 className="text-4xl md:text-6xl font-bold text-brand-white mb-6">
-              О компании <span className="text-brand-orange">UM-PIPE</span>
+              О компании <span className="text-brand-orange">УралМет</span>
             </h1>
             <p className="text-xl text-brand-white/70 max-w-3xl">
-              Специализированное предприятие по поставкам труб и оборудования 
-              для нефтегазовой отрасли
-            </p>
+                ООО «УралМет» — динамично развивающаяся частная компания, выполняющая строительные работы полного цикла и осуществляющая комплектацию энергетических, нефтяных и химических объектов на территории Российской Федерации и стран ближнего зарубежья. Основное направление деятельности компании — поставки трубного металлопроката широкой номенклатуры.            </p>
           </FadeIn>
         </div>
       </section>
@@ -35,9 +59,9 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-brand-white/70">
                 <p>
-                  UM-PIPE зарегистрирована в 2011 году. Сегодня это современные 
+                  УралМет зарегистрирована в 2019 году. Сегодня это современные 
                   офисные и складские площади площадью <strong>4 000 м²</strong> в 
-                  промышленной зоне Москвы.
+                  промышленной зоне Екатеринбурга.
                 </p>
                 <p>
                   Компания оснащена современным оборудованием для контроля качества 
@@ -45,7 +69,7 @@ export default function About() {
                   оснащённая современными образцами испытательной техники.
                 </p>
                 <p>
-                  UM-PIPE — это предприятие, способное решать сложные инжиниринговые 
+                  УралМет — это предприятие, способное решать сложные инжиниринговые 
                   задачи и осуществлять комплексные поставки на объекты строительства 
                   и реконструкции нефтегазовых объектов.
                 </p>
@@ -58,7 +82,7 @@ export default function About() {
                 <div className="relative rounded-2xl overflow-hidden border-2 border-brand-orange/30 aspect-video">
                   <img 
                     src={productionImg} 
-                    alt="Производство UM-PIPE" 
+                    alt="Производство УралМет" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -79,7 +103,7 @@ export default function About() {
                 <div className="relative rounded-2xl overflow-hidden border-2 border-brand-orange/30 aspect-video">
                   <img 
                     src={aboutImg} 
-                    alt="О компании UM-PIPE" 
+                    alt="О компании УралМет" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -165,11 +189,50 @@ export default function About() {
             </h2>
           </FadeIn>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {ADVANTAGES.map((item, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: (
+                  <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                ),
+                title: 'Прямые поставки',
+                description: 'Комплексная поставка трубной продукции и деталей трубопровода"'
+              },
+              {
+                icon: (
+                  <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                ),
+                title: 'Условия платежа',
+                description: 'Отсрочка платежа на срок до 60 календарных дней'
+              },
+              {
+                icon: (
+                  <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                  </svg>
+                ),
+                title: 'Доставка',
+                description: 'Грамотно организованная логистика'
+              },
+              {
+                icon: (
+                  <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                ),
+                title: 'Гарантия качества',
+                description: 'Индивидуальный подход в ценообразовании'
+              }
+            ].map((item, index) => (
               <FadeIn key={index} delay={index * 100}>
-                <div className="card group hover:scale-105 transition-transform duration-300">
-                  <div className="text-4xl mb-4">{item.icon}</div>
+                <div className="card group hover:scale-105 transition-transform duration-300 h-full">
+                  <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {item.icon}
+                  </div>
                   <h3 className="text-lg font-bold text-brand-white mb-3">
                     {item.title}
                   </h3>
@@ -183,29 +246,24 @@ export default function About() {
         </div>
       </section>
 
-      {/* Сертификаты */}
+      {/* Наши партнеры */}
       <section className="section bg-brand-black">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-brand-white mb-12">
-              Сертификаты и лицензии
+            <h2 className="text-3xl font-bold text-brand-white mb-12 text-center">
+              Наши партнеры
             </h2>
           </FadeIn>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              'Система менеджмента качества ISO 9001-2015',
-              'Разрешение Федеральной службы по экологическому, технологическому и атомному надзору',
-              'Разрешение Проматомнадзора Республики Беларусь',
-              'Лицензия на право изготовления оборудования для атомных станций',
-              'Свидетельство типового одобрения Российского морского регистра судоходства',
-              'Внесение в реестр поставщиков ПАО "Газпром"',
-              'Аккредитация как поставщик ПАО "НК "Роснефть"'
-            ].map((item, index) => (
-              <FadeIn key={index} delay={index * 100}>
-                <div className="flex items-start gap-4 p-4 border-l-2 border-brand-orange bg-brand-dark/50">
-                  <div className="text-brand-orange text-2xl">✓</div>
-                  <div className="text-brand-white/80">{item}</div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {partners.map((partner, index) => (
+              <FadeIn key={index} delay={index * 50}>
+                <div className="card h-32 flex items-center justify-center bg-white border border-brand-orange/20 p-6">
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.fullName}
+                    className="max-h-16 w-auto object-contain"
+                  />
                 </div>
               </FadeIn>
             ))}
@@ -214,7 +272,7 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="section bg-brand-dark">
+      <section className="section bg-brand-black">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn>
             <h2 className="text-3xl font-bold text-brand-white mb-6">

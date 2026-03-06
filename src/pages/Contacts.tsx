@@ -55,10 +55,10 @@ export default function Contacts() {
                     <div className="flex items-start gap-4">
                       <span className="text-brand-orange text-2xl">📍</span>
                       <div>
-                        <div className="text-brand-white font-semibold">Адрес</div>
+                        <div className="text-brand-white font-semibold">Юридический адрес</div>
                         <div className="text-brand-white/70">
-                          г. Москва, Моховая улица, 15/1с1<br />
-                          Бизнес-центр "Моховая 15"
+                          620110, Свердловская область, г. Екатеринбург,<br />
+                          ул. Краснолесья стр.12А, оф.642
                         </div>
                       </div>
                     </div>
@@ -67,10 +67,10 @@ export default function Contacts() {
                       <span className="text-brand-orange text-2xl">📞</span>
                       <div>
                         <div className="text-brand-white font-semibold">Телефон</div>
-                        <a href="tel:+78001234567" className="text-brand-white/70 hover:text-brand-orange transition-colors">
-                          +7 (800) 123-45-67
+                        <a href="tel:+73431234567" className="text-brand-white/70 hover:text-brand-orange transition-colors">
+                          +7 (343) 123-45-67
                         </a>
-                        <div className="text-brand-white/50 text-sm">Бесплатно по РФ</div>
+                        <div className="text-brand-white/50 text-sm">Екатеринбург</div>
                       </div>
                     </div>
 
@@ -78,11 +78,11 @@ export default function Contacts() {
                       <span className="text-brand-orange text-2xl">✉️</span>
                       <div>
                         <div className="text-brand-white font-semibold">Email</div>
-                        <a href="mailto:info@um-pipe.ru" className="text-brand-white/70 hover:text-brand-orange transition-colors">
-                          info@um-pipe.ru
+                        <a href="mailto:info@uralmet.ru" className="text-brand-white/70 hover:text-brand-orange transition-colors">
+                          info@uralmet.ru
                         </a>
                         <div className="text-brand-white/70">
-                          sales@um-pipe.ru — отдел продаж
+                          sales@uralmet.ru — отдел продаж
                         </div>
                       </div>
                     </div>
@@ -92,7 +92,7 @@ export default function Contacts() {
                       <div>
                         <div className="text-brand-white font-semibold">Режим работы</div>
                         <div className="text-brand-white/70">
-                          Пн-Пт: 09:00 - 18:00 (МСК)<br />
+                          Пн-Пт: 09:00 - 18:00 (ЕКБ)<br />
                           Сб-Вс: выходные
                         </div>
                       </div>
@@ -107,23 +107,28 @@ export default function Contacts() {
                   </h3>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-brand-white/60">ООО "ЮМ-ПАЙП"</span>
+                      <span className="text-brand-white/60">Наименование</span>
+                      <span className="text-brand-white">ООО «УралМет»</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-brand-white/60">ИНН</span>
-                      <span className="text-brand-white">7701234567</span>
+                      <span className="text-brand-white/60">Полное наименование</span>
+                      <span className="text-brand-white text-right ml-4">Общество с ограниченной ответственностью «УралМет»</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-brand-white/60">КПП</span>
-                      <span className="text-brand-white">770101001</span>
+                      <span className="text-brand-white/60">ИНН/КПП</span>
+                      <span className="text-brand-white">6679058883 / 667101001</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-brand-white/60">ОГРН</span>
-                      <span className="text-brand-white">1127746123456</span>
+                      <span className="text-brand-white">1146679030520</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-brand-white/60">Р/с</span>
-                      <span className="text-brand-white">40702810123456789012</span>
+                      <span className="text-brand-white/60">ОКПО</span>
+                      <span className="text-brand-white">44146124</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-brand-white/60">ОКАТО</span>
+                      <span className="text-brand-white">65401390000</span>
                     </div>
                   </div>
                 </div>
@@ -233,7 +238,7 @@ export default function Contacts() {
       <section className="section bg-brand-dark">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-brand-white mb-6 text-center">
+            <h2 className="text-3xl font-bold text-brand-white mb-12 text-center w-full">
               Как до нас добраться
             </h2>
             
@@ -249,11 +254,11 @@ export default function Contacts() {
                       <span className="text-brand-orange text-xl">📍</span>
                       <div>
                         <div className="font-semibold text-brand-white">
-                          г. Москва
+                          г. Екатеринбург
                         </div>
-                        <div>Моховая улица, 15/1с1</div>
+                        <div>ул. Краснолесья стр.12А, оф.642</div>
                         <div className="text-sm text-brand-white/50">
-                          Бизнес-центр "Моховая 15"
+                          Индекс: 620110
                         </div>
                       </div>
                     </div>
@@ -264,9 +269,9 @@ export default function Contacts() {
                         <div className="font-semibold text-brand-white">
                           Ближайшее метро
                         </div>
-                        <div>Охотный ряд (5 мин пешком)</div>
+                        <div>Чкаловская (15 мин на такси)</div>
                         <div className="text-sm text-brand-white/50">
-                          Библиотека им. Ленина (7 мин)
+                          Геологическая (20 мин на такси)
                         </div>
                       </div>
                     </div>
@@ -277,7 +282,7 @@ export default function Contacts() {
                         <div className="font-semibold text-brand-white">
                           Парковка
                         </div>
-                        <div>Гостевая парковка во дворе</div>
+                        <div>Гостевая парковка на территории</div>
                       </div>
                     </div>
                   </div>
@@ -287,7 +292,7 @@ export default function Contacts() {
                 <div className="rounded-xl overflow-hidden border-2 border-brand-orange/30">
                   <img 
                     src={officeImg} 
-                    alt="Офис UM-PIPE" 
+                    alt="Офис УралМет" 
                     className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -304,14 +309,12 @@ export default function Contacts() {
               </div>
 
               {/* Карта */}
-              <div className="lg:col-span-2 rounded-xl overflow-hidden border-2 border-brand-orange/30 shadow-2xl">
+              <div className="lg:col-span-2 rounded-xl overflow-hidden border-2 border-brand-orange/30 shadow-2xl h-[600px]">
                 <iframe
-                  src="https://yandex.ru/map-widget/v1/?ll=37.613997%2C55.756736&z=17&pt=37.613997,55.756736,pm2rdm&l=map"
-                  width="100%"
-                  height="500"
+                  src="https://yandex.ru/map-widget/v1/?ll=60.547869%2C56.779338&z=17&pt=60.547869,56.779338,pm2rdm&l=map"
+                  className="w-full h-full"
                   allowFullScreen={true}
-                  title="UM-PIPE офис на карте"
-                  className="hover:opacity-90 transition-opacity duration-300"
+                  title="УралМет офис на карте"
                 />
               </div>
             </div>

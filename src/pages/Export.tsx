@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import FadeIn from '../components/animations/FadeIn'
 import exportImg from '../assets/images/export-shipping.jpg'
 
@@ -86,7 +87,7 @@ export default function Export() {
             <div className="relative group rounded-2xl overflow-hidden border-2 border-brand-orange/30">
               <img 
                 src={exportImg} 
-                alt="Экспорт UM-PIPE" 
+                alt="Экспорт УралМет" 
                 className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
@@ -211,9 +212,9 @@ export default function Export() {
             <p className="text-xl text-brand-white/70 mb-8">
               Наши специалисты помогут с подбором продукции и оформлением экспортных документов
             </p>
-            <button className="btn-primary text-lg px-10 py-4">
+            <Link to="/contacts" className="btn-primary text-lg px-10 py-4 inline-block">
               Обсудить проект
-            </button>
+            </Link>
           </FadeIn>
         </div>
       </section>

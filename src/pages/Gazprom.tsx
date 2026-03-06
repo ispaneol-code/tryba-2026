@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import FadeIn from '../components/animations/FadeIn'
 import gazpromImg from '../assets/images/gazprom-certificate.jpg'
 
@@ -54,7 +55,7 @@ export default function Gazprom() {
               </h2>
               <div className="space-y-4 text-brand-white/70">
                 <p>
-                  UM-PIPE внесена в реестр поставщиков ПАО "Газпром" и осуществляет 
+                  УралМет внесена в реестр поставщиков ПАО "Газпром" и осуществляет 
                   поставки продукции, соответствующей всем требованиям корпоративных 
                   стандартов.
                 </p>
@@ -180,9 +181,9 @@ export default function Gazprom() {
             <p className="text-xl text-brand-white/70 mb-8">
               Свяжитесь с нами для получения консультации и расчёта стоимости
             </p>
-            <button className="btn-primary text-lg px-10 py-4">
+            <Link to="/contacts" className="btn-primary text-lg px-10 py-4 inline-block">
               Оставить заявку
-            </button>
+            </Link>
           </FadeIn>
         </div>
       </section>
