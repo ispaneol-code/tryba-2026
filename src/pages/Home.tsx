@@ -66,9 +66,7 @@ export default function Home() {
 
           {/* Стрелка вниз */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-brand-orange/50 rounded-full flex justify-center pt-2">
               <div className="w-1 h-3 bg-brand-orange rounded-full animate-pulse" />
-            </div>
           </div>
         </div>
       </section>
@@ -102,7 +100,7 @@ export default function Home() {
                 Надёжные поставки <span className="text-brand-orange">под ключ</span>
               </h2>
               <p className="text-brand-white/70 mb-6">
-                UM-PIPE — специализированное предприятие по поставкам труб и оборудования 
+                УралМет — специализированное предприятие по поставкам труб и оборудования 
                 для нефтегазовой отрасли. Работаем напрямую с производителями и ПАО "Газпром".
               </p>
               <ul className="space-y-3 mb-8">
@@ -130,7 +128,7 @@ export default function Home() {
                 <div className="relative rounded-2xl overflow-hidden border-2 border-brand-orange/30 bg-brand-dark aspect-video">
                   <img 
                     src={warehouseImg} 
-                    alt="Склад UM-PIPE" 
+                    alt="Склад УралМет" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -164,7 +162,7 @@ export default function Home() {
             <div className="relative group rounded-2xl overflow-hidden border-2 border-brand-orange/30">
               <img 
                 src={pipesImg} 
-                alt="Продукция UM-PIPE" 
+                alt="Продукция УралМет" 
                 className="w-full h-64 md:h-80 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
@@ -251,7 +249,7 @@ export default function Home() {
                 <div className="relative rounded-2xl overflow-hidden border-2 border-brand-orange/30 bg-brand-dark aspect-video">
                   <img 
                     src={teamImg} 
-                    alt="Команда UM-PIPE" 
+                    alt="Команда УралМет" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -301,7 +299,7 @@ export default function Home() {
                 Сотрудничество с <span className="text-brand-orange">ПАО "Газпром"</span>
               </h2>
               <p className="text-brand-white/70 mb-6">
-                UM-PIPE внесена в реестр поставщиков ПАО "Газпром" и осуществляет поставки 
+                УралМет внесена в реестр поставщиков ПАО "Газпром" и осуществляет поставки 
                 продукции, соответствующей всем требованиям корпоративных стандартов.
               </p>
               <ul className="space-y-3 mb-8">
@@ -457,10 +455,10 @@ export default function Home() {
                 Связаться с нами
               </Link>
               <a 
-                href="tel:+78001234567"
+                href="tel:+73431234567"
                 className="px-10 py-4 border-2 border-brand-white/30 text-brand-white font-bold rounded-lg hover:bg-brand-white hover:text-brand-black transition-all duration-300 text-lg"
               >
-                +7 (800) 123-45-67
+                +7 (343) 123-45-67
               </a>
             </div>
           </FadeIn>
