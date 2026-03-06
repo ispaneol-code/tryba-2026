@@ -2,9 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import FadeIn from '../components/animations/FadeIn'
 
-// Импорт изображений
-import productsHeroImg from '../assets/images/pipes-products.jpg'
-
 const categories = [
   {
     id: 'welded-pipes',
@@ -165,6 +162,7 @@ const getAllItems = () => {
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState('all')
+  const [isTextExpanded, setIsTextExpanded] = useState(false)
 
   // Получаем товары для отображения
   const displayedItems = activeCategory === 'all' 
@@ -173,15 +171,9 @@ export default function Products() {
 
   return (
     <div className="pt-20">
-      {/* Hero с фото */}
-      <section className="relative bg-brand-dark py-20">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${productsHeroImg})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 to-brand-dark" />
-        
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
+      {/* Hero секция */}
+      <section className="bg-brand-dark py-20">
+        <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
             <h1 className="text-4xl md:text-6xl font-bold text-brand-white mb-6">
               Продукция <span className="text-brand-orange">УралМет</span>
@@ -286,6 +278,89 @@ export default function Products() {
             <Link to="/contacts" className="btn-primary text-lg px-10 py-4 inline-block">
               Получить консультацию
             </Link>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ========== SEO-ТЕКСТ ДЛЯ ЯНДЕКС ========== */}
+      <section className="section bg-brand-dark border-t border-brand-orange/10">
+        <div className="max-w-7xl mx-auto px-4 py-12">
+          <FadeIn>
+            <div className="prose prose-invert max-w-none">
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Продукция УралМет — трубный металлопрокат в Екатеринбурге
+              </h2>
+              
+              {/* Контейнер с текстом и затенением */}
+              <div className="relative">
+                <div 
+                  className={`text-brand-white/70 text-sm leading-relaxed space-y-4 transition-all duration-500 ${
+                    isTextExpanded ? 'max-h-none' : 'max-h-40 overflow-hidden'
+                  }`}
+                >
+                  <p>
+                    Компания УралМет предлагает трубный металлопрокат в Екатеринбурге широкого сортамента. У нас можно трубы стальные купить оптом и в розницу: трубы электросварные прямошовные ГОСТ 10704-91, трубы электросварные спиральношовные ГОСТ 20295-85, трубы бесшовные горячедеформированные ГОСТ 8732-78, трубы бесшовные холоднодеформированные ГОСТ 8734-75. Металлопрокат купить в Екатеринбурге с доставкой по России.
+                  </p>
+                  
+                  <p>
+                    Специализированная продукция: трубы хладостойкие для газопроводов по ТУ 14-3р-1128-2007, трубы котельные купить по ТУ 14-3р-55-2001, трубы нержавеющие ГОСТ 9940-81, трубы нержавеющие ГОСТ 9941-81, трубы коррозионно стойкие, трубы в ППУ изоляции (ППУ-ПЭ, ППУ-ОЦ, ВУС). Трубы бесшовные купить Екатеринбург — в наличии на складе.
+                  </p>
+                  
+                  <p>
+                    Соединительные детали трубопроводов: отводы крутоизогнутые ГОСТ 17375-2001, тройники стальные купить, переходы концентрические и эксцентрические, фланцы стальные ГОСТ, заглушки эллиптические по ТУ 1469-017-38948552-2015. Трубы профильные, трубы ВГП купить, трубы водогазопроводные оцинкованные — весь сортамент в наличии.
+                  </p>
+                  
+                  <p>
+                    Другой металлопрокат: лист стальной горячекатаный, лист стальной холоднокатаный, уголок стальной равнополочный, швеллер горячекатаный, балка двутавровая цена, арматура строительная купить, фасонный прокат, сортовой прокат. Металлопрокат для металлоконструкций, трубы для свай и опор по ТУ 24.20-001-44146124-2023.
+                  </p>
+                  
+                  <p>
+                    Трубы стальные цена за тонну Екатеринбург — конкурентная благодаря прямым поставкам. Металлопрокат купить оптом Урал от производителей ТМК, ЧТПЗ, ОМК. Трубы от производителя цена ниже рыночной, металлопрокат Екатеринбург прайс лист — запрашивайте у менеджеров. Работаем с НДС, отсрочка платежа.
+                  </p>
+                  
+                  <p>
+                    Трубы для нефтегазопроводов купить, трубы для котельных цена, трубы для газопроводов высокого давления, трубы из реестра Газпром с сертификатами. Трубы ГОСТ, трубы ГОСТ Р 53383-2009, металлопрокат с доставкой по России, Казахстану, Узбекистану. Трубы Екатеринбург Краснолесья — самовывоз со склада.
+                  </p>
+                  
+                  <p>
+                    Трубы оптом от производителя, трубы в наличии на складе, трубы с доставкой Екатеринбург и Свердловская область. Купить трубы Свердловская область, металлопрокат Урал доставка в любой регион. Трубы с сертификатом качества, металлопрокат отсрочка платежа до 60 дней — выгодные условия для постоянных клиентов.
+                  </p>
+                  
+                  <p className="text-brand-orange/80 font-medium">
+                    📞 Запросите прайс-лист: трубный металлопрокат Екатеринбург, трубы стальные купить, металлопрокат Екатеринбург, купить трубы Свердловская область, металлопрокат Урал доставка, трубы с доставкой Екатеринбург — звоните +7 (343) 123-45-67.
+                  </p>
+                </div>
+                
+                {/* Градиентное затенение снизу */}
+                {!isTextExpanded && (
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-brand-dark to-transparent pointer-events-none" />
+                )}
+              </div>
+              
+              {/* Отдельный блок с кнопкой "Читать далее" */}
+              <div className="mt-6 text-center">
+                <button
+                  onClick={() => setIsTextExpanded(!isTextExpanded)}
+                  className="inline-flex items-center gap-2 text-white font-bold"
+                >
+                  {isTextExpanded ? (
+                    <>
+                      <span>Свернуть</span>
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                      </svg>
+                    </>
+                  ) : (
+                    <>
+                      <span>Читать далее</span>
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </>
+                  )}
+                </button>
+              </div>
+            </div>
           </FadeIn>
         </div>
       </section>

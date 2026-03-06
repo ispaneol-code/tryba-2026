@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import FadeIn from '../components/animations/FadeIn'
 import { STATS } from '../utils/constants'
@@ -9,6 +10,8 @@ import teamImg from '../assets/images/team-office.jpg'
 import pipesImg from '../assets/images/pipes-products.jpg'
 
 export default function Home() {
+  const [isTextExpanded, setIsTextExpanded] = useState(false)
+
   return (
     <div className="pt-20">
       {/* ========== HERO СЕКЦИЯ ========== */}
@@ -17,6 +20,8 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{ backgroundImage: `url(${heroBg})` }}
+          role="img"
+          aria-label="Трубный металлопрокат УралМет Екатеринбург — трубы стальные, трубы электросварные и бесшовные для нефтегазовой отрасли"
         />
         
         {/* Градиент поверх фото */}
@@ -128,7 +133,7 @@ export default function Home() {
                 <div className="relative rounded-2xl overflow-hidden border-2 border-brand-orange/30 bg-brand-dark aspect-video">
                   <img 
                     src={warehouseImg} 
-                    alt="Склад УралМет" 
+                    alt="Склад трубного металлопроката УралМет в Екатеринбурге — трубы стальные, трубы электросварные, трубы бесшовные, металлопрокат оптом" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -162,7 +167,7 @@ export default function Home() {
             <div className="relative group rounded-2xl overflow-hidden border-2 border-brand-orange/30">
               <img 
                 src={pipesImg} 
-                alt="Продукция УралМет" 
+                alt="Трубы стальные электросварные и бесшовные ГОСТ — трубы профильные, трубы ВГП, металлопрокат купить в Екатеринбурге, трубы для нефтегазопроводов" 
                 className="w-full h-64 md:h-80 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
@@ -249,7 +254,7 @@ export default function Home() {
                 <div className="relative rounded-2xl overflow-hidden border-2 border-brand-orange/30 bg-brand-dark aspect-video">
                   <img 
                     src={teamImg} 
-                    alt="Команда УралМет" 
+                    alt="Команда УралМет — поставки труб и оборудования для нефтегазовой отрасли, металлопрокат с доставкой по России, Казахстану, Узбекистану" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -460,6 +465,93 @@ export default function Home() {
               >
                 +7 (343) 123-45-67
               </a>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ========== SEO-ТЕКСТ ДЛЯ ЯНДЕКС ========== */}
+      <section className="section bg-brand-dark border-t border-brand-orange/10">
+        <div className="max-w-7xl mx-auto px-4 py-12">
+          <FadeIn>
+            <div className="prose prose-invert max-w-none">
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Трубный металлопрокат в Екатеринбурге от производителя УралМет
+              </h2>
+              
+              {/* Контейнер с текстом и затенением */}
+              <div className="relative">
+                <div 
+                  className={`text-brand-white/70 text-sm leading-relaxed space-y-4 transition-all duration-500 ${
+                    isTextExpanded ? 'max-h-none' : 'max-h-40 overflow-hidden'
+                  }`}
+                >
+                  <p>
+                    Компания УралМет предлагает трубный металлопрокат и металлопрокат в Екатеринбурге с доставкой по России. В нашем ассортименте: трубы стальные купить которые можно оптом и в розницу, трубы электросварные прямошовные ГОСТ 10704-91 и спиральношовные ГОСТ 20295-85, трубы бесшовные горячедеформированные ГОСТ 8732-78 и холоднодеформированные ГОСТ 8734-75.
+                  </p>
+                  
+                  <p>
+                    Мы поставляем металлопрокат купить который можно с отсрочкой платежа: трубы профильные, трубы ГОСТ, трубы ВГП, трубы водогазопроводные оцинкованные. Все позиции доступны по запросу: труба электросварная цена за тонну, труба бесшовная цена, металлопрокат екатеринбург прайс лист.
+                  </p>
+                  
+                  <p>
+                    Специализированный сортамент: трубы хладостойкие для газопроводов по ТУ 14-3р-1128-2007, трубы котельные купить по ТУ 14-3р-55-2001, трубы нержавеющие ГОСТ 9940-81, трубы коррозионно стойкие, трубы в ППУ изоляции (ППУ-ПЭ, ППУ-ОЦ, ВУС).
+                  </p>
+                  
+                  <p>
+                    Соединительные детали трубопроводов из реестра ПАО «Газпром»: отводы крутоизогнутые ГОСТ 17375-2001, тройники стальные, переходы концентрические, фланцы стальные ГОСТ, заглушки эллиптические по ТУ 1469-017-38948552-2015.
+                  </p>
+                  
+                  <p>
+                    Другой металлопрокат в наличии: лист стальной горячекатаный и холоднокатаный, уголок стальной равнополочный, швеллер горячекатаный, балка двутавровая цена, арматура строительная купить, фасонный и сортовой прокат.
+                  </p>
+                  
+                  <p>
+                    Трубы стальные цена за тонну Екатеринбург — конкурентная благодаря прямым поставкам от производителей ТМК, ЧТПЗ, ОМК. Работаем с НДС, предоставляем отсрочку платежа до 60 дней. Металлопрокат купить оптом Урал — выгодное решение для строительных и промышленных предприятий.
+                  </p>
+                  
+                  <p>
+                    Трубы для нефтегазопроводов купить, трубы для котельных, трубы для свай и опор, металлопрокат для металлоконструкций, трубы для газопроводов высокого давления — всё в наличии на складе в Екатеринбурге (ул. Краснолесья). Металлопрокат с доставкой по России, Казахстану, Узбекистану.
+                  </p>
+                  
+                  <p>
+                    Трубы из реестра Газпром с полным пакетом документов: сертификаты качества, паспорта продукции, разрешения Ростехнадзора. Трубы оптом от производителя, трубы в наличии на складе, трубы с доставкой Екатеринбург и Свердловская область.
+                  </p>
+                  
+                  <p className="text-brand-orange/80 font-medium">
+                    📞 Запросите актуальный прайс-лист: трубный металлопрокат Екатеринбург, купить трубы Свердловская область, металлопрокат Урал доставка — звоните +7 (343) 123-45-67.
+                  </p>
+                </div>
+                
+                {/* Градиентное затенение снизу */}
+                {!isTextExpanded && (
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-brand-dark to-transparent pointer-events-none" />
+                )}
+              </div>
+              
+              {/* Отдельный блок с кнопкой "Читать далее" */}
+              <div className="mt-6 text-center">
+                <button
+                  onClick={() => setIsTextExpanded(!isTextExpanded)}
+                  className="inline-flex items-center gap-2 text-white font-bold"
+                >
+                  {isTextExpanded ? (
+                    <>
+                      <span>Свернуть</span>
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                      </svg>
+                    </>
+                  ) : (
+                    <>
+                      <span>Читать далее</span>
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
           </FadeIn>
         </div>
