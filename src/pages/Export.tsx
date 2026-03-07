@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import FadeIn from '../components/animations/FadeIn'
 import exportImg from '../assets/images/export-shipping.jpg'
@@ -63,6 +64,8 @@ const exportSteps = [
 ]
 
 export default function Export() {
+  const [isTextExpanded, setIsTextExpanded] = useState(false)
+
   return (
     <div className="pt-20">
       {/* Hero */}
@@ -87,7 +90,7 @@ export default function Export() {
             <div className="relative group rounded-2xl overflow-hidden border-2 border-brand-orange/30">
               <img 
                 src={exportImg} 
-                alt="Экспорт УралМет" 
+                alt="Экспорт трубного металлопроката УралМет в страны СНГ — трубы стальные, электросварные, бесшовные ГОСТ с доставкой в Россию, Казахстан, Узбекистан, таможенное оформление, ВЭД-сопровождение, экспортная логистика" 
                 className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
@@ -125,7 +128,7 @@ export default function Export() {
                   <ul className="space-y-2 mb-4">
                     {country.regions.map((region, rIndex) => (
                       <li key={rIndex} className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-brand-orange rounded-full" />
+                        <span className="w-1.5 h-1.5 bg-brand-orange rounded-full" aria-hidden="true" />
                         <span className="text-brand-white/70 text-sm">{region}</span>
                       </li>
                     ))}
@@ -193,7 +196,7 @@ export default function Export() {
             ].map((doc, index) => (
               <FadeIn key={index} delay={index * 50}>
                 <div className="flex items-start gap-4 p-4 bg-brand-dark rounded-lg">
-                  <span className="text-brand-orange text-xl">📄</span>
+                  <span className="text-brand-orange text-xl" aria-hidden="true">📄</span>
                   <span className="text-brand-white/80">{doc}</span>
                 </div>
               </FadeIn>
@@ -215,6 +218,89 @@ export default function Export() {
             <Link to="/contacts" className="btn-primary text-lg px-10 py-4 inline-block">
               Обсудить проект
             </Link>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ========== SEO-ТЕКСТ ДЛЯ ЯНДЕКС ========== */}
+      <section className="section bg-brand-dark border-t border-brand-orange/10">
+        <div className="max-w-7xl mx-auto px-4 py-12">
+          <FadeIn>
+            <div className="prose prose-invert max-w-none">
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Экспорт трубного металлопроката в страны СНГ — УралМет
+              </h2>
+              
+              {/* Контейнер с текстом и затенением */}
+              <div className="relative">
+                <div 
+                  className={`text-brand-white/70 text-sm leading-relaxed space-y-4 transition-all duration-500 ${
+                    isTextExpanded ? 'max-h-none' : 'max-h-40 overflow-hidden'
+                  }`}
+                >
+                  <p>
+                    Компания УралМет осуществляет экспорт трубного металлопроката из Екатеринбурга в страны СНГ. У нас можно трубы стальные купить с доставкой в Россию, Казахстан, Узбекистан: трубы электросварные прямошовные ГОСТ 10704-91, трубы электросварные спиральношовные ГОСТ 20295-85, трубы бесшовные горячедеформированные ГОСТ 8732-78, трубы бесшовные холоднодеформированные ГОСТ 8734-75.
+                  </p>
+                  
+                  <p>
+                    Экспортные поставки металлопроката: трубы профильные, трубы ВГП купить, трубы водогазопроводные оцинкованные, трубы хладостойкие для газопроводов по ТУ 14-3р-1128-2007. Трубы котельные купить по ТУ 14-3р-55-2001, трубы нержавеющие ГОСТ 9940-81, трубы коррозионно стойкие — всё с экспортными сертификатами.
+                  </p>
+                  
+                  <p>
+                    Соединительные детали для экспорта: отводы крутоизогнутые ГОСТ 17375-2001, тройники стальные купить, переходы концентрические, фланцы стальные ГОСТ, заглушки эллиптические по ТУ 1469-017-38948552-2015. Трубы из реестра Газпром с полным пакетом документов для таможенного оформления.
+                  </p>
+                  
+                  <p>
+                    Металлопрокат для экспорта: лист стальной горячекатаный, уголок стальной равнополочный, швеллер горячекатаный, балка двутавровая цена, арматура строительная купить. Трубы для нефтегазопроводов купить, трубы для газопроводов высокого давления, трубы для свай и опор по ТУ 24.20-001-44146124-2023.
+                  </p>
+                  
+                  <p>
+                    Трубы стальные цена за тонну Екатеринбург включает экспортную логистику. Металлопрокат купить оптом Урал с доставкой по России, Казахстану, Узбекистану. Трубы от производителя цена + экспортное сопровождение = надёжность. Металлопрокат Екатеринбург прайс лист с учётом таможенных пошлин.
+                  </p>
+                  
+                  <p>
+                    Экспортная документация: контракты, инвойсы, сертификаты происхождения СТ-1, паспорта качества, разрешения Ростехнадзора. Трубы с сертификатом качества для ЕАЭС, металлопрокат с доставкой по СНГ, трубы с доставкой Екатеринбург — полный цикл экспортных услуг.
+                  </p>
+                  
+                  <p>
+                    Трубы оптом от производителя на экспорт, трубы в наличии на складе, металлопрокат с доставкой по России, Казахстану, Узбекистану. Купить трубы Свердловская область для экспорта, металлопрокат Урал доставка в страны СНГ, трубы Екатеринбург Краснолесья — отгрузка с нашего склада.
+                  </p>
+                  
+                  <p className="text-brand-orange/80 font-medium">
+                    📞 Запросите экспортный прайс: трубный металлопрокат Екатеринбург, трубы стальные купить на экспорт, металлопрокат Екатеринбург, купить трубы Свердловская область, металлопрокат Урал доставка в СНГ — звоните +7 (343) 123-45-67.
+                  </p>
+                </div>
+                
+                {/* Градиентное затенение снизу */}
+                {!isTextExpanded && (
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-brand-dark to-transparent pointer-events-none" />
+                )}
+              </div>
+              
+              {/* Отдельный блок с кнопкой "Читать далее" */}
+              <div className="mt-6 text-center">
+                <button
+                  onClick={() => setIsTextExpanded(!isTextExpanded)}
+                  className="inline-flex items-center gap-2 text-white font-bold"
+                >
+                  {isTextExpanded ? (
+                    <>
+                      <span>Свернуть</span>
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                      </svg>
+                    </>
+                  ) : (
+                    <>
+                      <span>Читать далее</span>
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </>
+                  )}
+                </button>
+              </div>
+            </div>
           </FadeIn>
         </div>
       </section>
