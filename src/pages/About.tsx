@@ -34,6 +34,64 @@ const partners = [
   { logo: partner10, name: 'УЗТС', fullName: 'Уральский Завод Трубопроводного Сервиса' }
 ]
 
+// Новые 6 преимуществ с иконками
+const advantages = [
+  {
+    icon: (
+      <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    ),
+    title: 'Прямые контракты',
+    description: 'Прямые контракты с ведущими трубными заводами России и СНГ'
+  },
+  {
+    icon: (
+      <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+      </svg>
+    ),
+    title: 'Полный цикл сопровождения',
+    description: 'Полный цикл сопровождения поставки — от подбора продукции до доставки на объект'
+  },
+  {
+    icon: (
+      <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+      </svg>
+    ),
+    title: 'Сертифицированная продукция',
+    description: 'Сертифицированная продукция, соответствующая требованиям ГОСТ, ТУ и международных стандартов'
+  },
+  {
+    icon: (
+      <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    title: 'Экспортные поставки',
+    description: 'Комплексные поставки на экспорт с полным таможенным оформлением'
+  },
+  {
+    icon: (
+      <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    ),
+    title: 'Реестр Газпром',
+    description: 'Поставка продукции, включённой в Реестр ПАО «Газпром»'
+  },
+  {
+    icon: (
+      <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+      </svg>
+    ),
+    title: 'Собственные склады',
+    description: 'Собственные складские мощности и оперативная логистика'
+  }
+]
+
 export default function About() {
   const [isTextExpanded, setIsTextExpanded] = useState(false)
 
@@ -47,7 +105,7 @@ export default function About() {
               О компании <span className="text-brand-orange">УралМет</span>
             </h1>
             <p className="text-xl text-brand-white/70 max-w-3xl">
-                ООО «УралМет» — динамично развивающаяся частная компания, выполняющая строительные работы полного цикла и осуществляющая комплектацию энергетических, нефтяных и химических объектов на территории Российской Федерации и стран ближнего зарубежья. Основное направление деятельности компании — поставки трубного металлопроката широкой номенклатуры.            </p>
+                ООО УралМет - торгово-производственная частная компания, занимающаяся комплектацией нефтегазовых, энергетических и химических объектов на территории РФ и Ближайшего Зарубежья. Главное направление деятельности компании – поставки трубного металлопроката разнообразного ассортимента.            </p>
           </FadeIn>
         </div>
       </section>
@@ -172,7 +230,7 @@ export default function About() {
                     'Сертификация по международным стандартам'
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="text-brand-orange text-lg">✓</span>
+                      <span className="text-brand-orange text-lg" aria-hidden="true">✓</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -183,7 +241,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Преимущества */}
+      {/* Преимущества — 6 карточек */}
       <section className="section bg-brand-dark">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
@@ -192,45 +250,9 @@ export default function About() {
             </h2>
           </FadeIn>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: (
-                  <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                ),
-                title: 'Прямые поставки',
-                description: 'Комплексная поставка трубной продукции и деталей трубопровода"'
-              },
-              {
-                icon: (
-                  <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                ),
-                title: 'Условия платежа',
-                description: 'Отсрочка платежа на срок до 60 календарных дней'
-              },
-              {
-                icon: (
-                  <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
-                  </svg>
-                ),
-                title: 'Доставка',
-                description: 'Грамотно организованная логистика'
-              },
-              {
-                icon: (
-                  <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                  </svg>
-                ),
-                title: 'Гарантия качества',
-                description: 'Индивидуальный подход в ценообразовании'
-              }
-            ].map((item, index) => (
+          {/* Сетка: 1 колонка на мобильных, 2 на планшетах, 3 на десктопах для 6 элементов */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {advantages.map((item, index) => (
               <FadeIn key={index} delay={index * 100}>
                 <div className="card group hover:scale-105 transition-transform duration-300 h-full">
                   <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -359,14 +381,14 @@ export default function About() {
                   {isTextExpanded ? (
                     <>
                       <span>Свернуть</span>
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                       </svg>
                     </>
                   ) : (
                     <>
                       <span>Читать далее</span>
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </>
