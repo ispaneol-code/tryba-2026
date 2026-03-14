@@ -271,16 +271,8 @@ export default function Home() {
                 Экспорт в <span className="text-brand-orange">страны СНГ</span>
               </h2>
               <p className="text-brand-white/70 mb-6">
-                Организуем поставки труб и оборудования в Россию, Казахстан и Узбекистан. 
-                Полное сопровождение экспортных сделок: документы, сертификация, логистика.
+                Регион поставки – от Центральной России до Дальнего Востока, страны Ближнего Зарубежья – Казахстан, Узбекистан, Таджикистан, Туркменистан.
               </p>
-              <div className="flex flex-wrap gap-3 mb-8">
-                {['🇷🇺 Россия', '🇰🇿 Казахстан', '🇺🇿 Узбекистан'].map((country, i) => (
-                  <span key={i} className="px-4 py-2 bg-brand-dark border border-brand-orange/30 rounded-lg text-brand-white/80 text-sm">
-                    {country}
-                  </span>
-                ))}
-              </div>
               <Link to="/export" className="btn-outline inline-block">
                 Подробнее об экспорте →
               </Link>
