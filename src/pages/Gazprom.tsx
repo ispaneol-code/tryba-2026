@@ -9,13 +9,13 @@ export default function Gazprom() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="bg-brand-dark py-20">
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <h1 className="text-4xl md:text-6xl font-bold text-brand-white mb-6">
-              Сотрудничество с <span className="text-brand-orange">ПАО "Газпром"</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-brand-black mb-6">
+              Сотрудничество с <span className="text-gray-600">ПАО "Газпром"</span>
             </h1>
-            <p className="text-xl text-brand-white/70 max-w-3xl">
+            <p className="text-xl text-brand-black/70 max-w-3xl">
               Поставки продукции из Единого реестра материально-технических ресурсов 
               ПАО "Газпром"
             </p>
@@ -24,22 +24,22 @@ export default function Gazprom() {
       </section>
 
             {/* Фото сертификатов */}
-      <section className="section bg-brand-black">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <div className="relative group rounded-2xl overflow-hidden border-2 border-brand-orange/30">
+            <div className="relative group rounded-2xl overflow-hidden border-2 border-gray-300 bg-gray-50">
               <img 
                 src={gazpromImg} 
                 alt="Трубы из реестра Газпром УралМет Екатеринбург — трубы стальные, электросварные, бесшовные ГОСТ для нефтегазопроводов, официальный поставщик ПАО Газпром, реестр МТР, сертификаты качества, разрешения Ростехнадзора" 
                 className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent" />
               <div className="absolute bottom-6 left-6">
-                <h2 className="text-3xl font-bold text-brand-white">
+                <h2 className="text-3xl font-bold text-brand-black">
                   Официальный поставщик
                 </h2>
-                <p className="text-brand-white/70">
+                <p className="text-brand-black/70">
                   Реестр МТР ПАО "Газпром"
                 </p>
               </div>
@@ -49,14 +49,14 @@ export default function Gazprom() {
       </section>
 
       {/* О реестре */}
-      <section className="section bg-brand-black">
+      <section className="section bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-brand-white mb-6">
+              <h2 className="text-3xl font-bold text-brand-black mb-6">
                 Единый реестр МТР
               </h2>
-              <div className="space-y-4 text-brand-white/70">
+              <div className="space-y-4 text-brand-black/70">
                 <p>
                   УралМет внесена в реестр поставщиков ПАО "Газпром" и осуществляет 
                   поставки продукции, соответствующей всем требованиям корпоративных 
@@ -68,19 +68,19 @@ export default function Gazprom() {
                 </p>
                 <ul className="space-y-2 mt-4">
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-orange" aria-hidden="true">✓</span>
+                    <span className="text-gray-600" aria-hidden="true">✓</span>
                     <span>Соответствие ГОСТ и ТУ</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-orange" aria-hidden="true">✓</span>
+                    <span className="text-gray-600" aria-hidden="true">✓</span>
                     <span>Сертификаты качества</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-orange" aria-hidden="true">✓</span>
+                    <span className="text-gray-600" aria-hidden="true">✓</span>
                     <span>Паспорта на продукцию</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-orange" aria-hidden="true">✓</span>
+                    <span className="text-gray-600" aria-hidden="true">✓</span>
                     <span>Разрешения Ростехнадзора</span>
                   </li>
                 </ul>
@@ -88,8 +88,8 @@ export default function Gazprom() {
             </FadeIn>
 
             <FadeIn delay={200}>
-              <div className="card bg-brand-orange/10 border-2 border-brand-orange/30">
-                <h3 className="text-2xl font-bold text-brand-white mb-6">
+              <div className="card bg-white border-2 border-gray-300">
+                <h3 className="text-2xl font-bold text-brand-black mb-6">
                   Преимущества работы с нами
                 </h3>
                 <ul className="space-y-4">
@@ -102,10 +102,10 @@ export default function Gazprom() {
                     'Гарантийное и постгарантийное обслуживание'
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-brand-orange rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
+                      <div className="w-6 h-6 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
                         <span className="text-white text-sm">✓</span>
                       </div>
-                      <span className="text-brand-white">{item}</span>
+                      <span className="text-brand-black">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -116,10 +116,10 @@ export default function Gazprom() {
       </section>
 
       {/* Продукция для Газпром */}
-      <section className="section bg-brand-dark">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-brand-white mb-12">
+            <h2 className="text-3xl font-bold text-brand-black mb-12">
               Продукция для объектов Газпром
             </h2>
           </FadeIn>
@@ -155,15 +155,15 @@ export default function Gazprom() {
               }
             ].map((category, index) => (
               <FadeIn key={index} delay={index * 100}>
-                <div className="card h-full">
-                  <h3 className="text-xl font-bold text-brand-white mb-4">
+                <div className="card h-full bg-white border border-gray-100">
+                  <h3 className="text-xl font-bold text-brand-black mb-4">
                     {category.title}
                   </h3>
                   <ul className="space-y-2">
                     {category.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 bg-brand-orange rounded-full mt-2 flex-shrink-0" aria-hidden="true" />
-                        <span className="text-brand-white/70 text-sm">{item}</span>
+                        <span className="w-1.5 h-1.5 bg-gray-600 rounded-full mt-2 flex-shrink-0" aria-hidden="true" />
+                        <span className="text-brand-black/70 text-sm">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -175,16 +175,16 @@ export default function Gazprom() {
       </section>
 
       {/* CTA */}
-      <section className="section bg-brand-black">
+      <section className="section bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-brand-white mb-6">
+            <h2 className="text-3xl font-bold text-brand-black mb-6">
               Нужна продукция из реестра Газпром?
             </h2>
-            <p className="text-xl text-brand-white/70 mb-8">
+            <p className="text-xl text-brand-black/70 mb-8">
               Свяжитесь с нами для получения консультации и расчёта стоимости
             </p>
-            <Link to="/contacts" className="btn-primary text-lg px-10 py-4 inline-block">
+            <Link to="/contacts" className="btn-primary text-lg px-10 py-4 inline-block bg-gray-600 text-white hover:bg-gray-700">
               Оставить заявку
             </Link>
           </FadeIn>
@@ -192,18 +192,18 @@ export default function Gazprom() {
       </section>
 
       {/* ========== SEO-ТЕКСТ ДЛЯ ЯНДЕКС ========== */}
-      <section className="section bg-brand-dark border-t border-brand-orange/10">
+      <section className="section bg-white border-t border-gray-300">
         <div className="max-w-7xl mx-auto px-4 py-12">
           <FadeIn>
-            <div className="prose prose-invert max-w-none">
-              <h2 className="text-2xl font-bold text-white mb-6">
+            <div className="prose max-w-none">
+              <h2 className="text-2xl font-bold text-brand-black mb-6">
                 Трубы из реестра Газпром в Екатеринбурге — официальный поставщик УралМет
               </h2>
               
               {/* Контейнер с текстом и затенением */}
               <div className="relative">
                 <div 
-                  className={`text-brand-white/70 text-sm leading-relaxed space-y-4 transition-all duration-500 ${
+                  className={`text-brand-black/70 text-sm leading-relaxed space-y-4 transition-all duration-500 ${
                     isTextExpanded ? 'max-h-none' : 'max-h-40 overflow-hidden'
                   }`}
                 >
@@ -235,14 +235,14 @@ export default function Gazprom() {
                     Трубы оптом от производителя для Газпром, трубы в наличии на складе с документами, металлопрокат отсрочка платежа для постоянных клиентов. Трубы ГОСТ Р 53383-2009, трубы из реестра Газпром с паспортами качества, разрешениями Ростехнадзора — полное соответствие требованиям.
                   </p>
                   
-                  <p className="text-brand-orange/80 font-medium">
+                  <p className="text-gray-600/80 font-medium">
                     📞 Запросите прайс-лист Газпром: трубный металлопрокат Екатеринбург, трубы стальные купить из реестра, металлопрокат Екатеринбург, купить трубы Свердловская область, металлопрокат Урал доставка на объекты Газпром — звоните +7 (343) 123-45-67.
                   </p>
                 </div>
                 
                 {/* Градиентное затенение снизу */}
                 {!isTextExpanded && (
-                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-brand-dark to-transparent pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none" />
                 )}
               </div>
               
@@ -250,7 +250,7 @@ export default function Gazprom() {
               <div className="mt-6 text-center">
                 <button
                   onClick={() => setIsTextExpanded(!isTextExpanded)}
-                  className="inline-flex items-center gap-2 text-white font-bold"
+                  className="inline-flex items-center gap-2 text-brand-black font-bold"
                 >
                   {isTextExpanded ? (
                     <>

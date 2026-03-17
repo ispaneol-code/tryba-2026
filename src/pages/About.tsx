@@ -38,7 +38,7 @@ const partners = [
 const advantages = [
   {
     icon: (
-      <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
+      <svg className="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
@@ -47,7 +47,7 @@ const advantages = [
   },
   {
     icon: (
-      <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
+      <svg className="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
       </svg>
     ),
@@ -56,7 +56,7 @@ const advantages = [
   },
   {
     icon: (
-      <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
+      <svg className="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
       </svg>
     ),
@@ -65,7 +65,7 @@ const advantages = [
   },
   {
     icon: (
-      <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
+      <svg className="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
@@ -74,7 +74,7 @@ const advantages = [
   },
   {
     icon: (
-      <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
+      <svg className="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
       </svg>
     ),
@@ -83,7 +83,7 @@ const advantages = [
   },
   {
     icon: (
-      <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
+      <svg className="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
       </svg>
     ),
@@ -98,27 +98,27 @@ export default function About() {
   return (
     <div className="pt-20">
       {/* Hero секция */}
-      <section className="relative bg-brand-dark py-20">
+      <section className="relative bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <FadeIn>
-            <h1 className="text-4xl md:text-6xl font-bold text-brand-white mb-6">
-              О компании <span className="text-brand-orange">УралМет</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-brand-black mb-6">
+              О компании <span className="text-gray-600">УралМет</span>
             </h1>
-            <p className="text-xl text-brand-white/70 max-w-3xl">
+            <p className="text-xl text-brand-black/70 max-w-3xl">
                 ООО УралМет - торгово-производственная частная компания, занимающаяся комплектацией нефтегазовых, энергетических и химических объектов на территории РФ и Ближайшего Зарубежья. Главное направление деятельности компании – поставки трубного металлопроката разнообразного ассортимента.            </p>
           </FadeIn>
         </div>
       </section>
 
       {/* История компании с фото */}
-      <section className="section bg-brand-black">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-brand-white mb-6">
+              <h2 className="text-3xl font-bold text-brand-black mb-6">
                 История и развитие
               </h2>
-              <div className="space-y-4 text-brand-white/70">
+              <div className="space-y-4 text-brand-black/70">
                 <p>
                   УралМет зарегистрирована в 2019 году. Сегодня это современные 
                   офисные и складские площади площадью <strong>4 000 м²</strong> в 
@@ -139,8 +139,8 @@ export default function About() {
             
             <FadeIn delay={200}>
               <div className="relative group">
-                <div className="absolute -inset-2 bg-gradient-to-r from-brand-orange to-brand-orange/50 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
-                <div className="relative rounded-2xl overflow-hidden border-2 border-brand-orange/30 aspect-video">
+                <div className="absolute -inset-2 bg-gradient-to-r from-gray-600 to-gray-600/50 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
+                <div className="relative rounded-2xl overflow-hidden border-2 border-gray-300 aspect-video bg-gray-50">
                   <img 
                     src={productionImg} 
                     alt="Производство и склад УралМет — трубный металлопрокат Екатеринбург, трубы стальные электросварные и бесшовные ГОСТ, металлопрокат оптом от производителя" 
@@ -155,13 +155,13 @@ export default function About() {
       </section>
 
       {/* Фото + Статистика */}
-      <section className="section bg-brand-dark">
+      <section className="section bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
             <FadeIn>
               <div className="relative group">
-                <div className="absolute -inset-2 bg-gradient-to-r from-brand-orange/50 to-brand-orange rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
-                <div className="relative rounded-2xl overflow-hidden border-2 border-brand-orange/30 aspect-video">
+                <div className="absolute -inset-2 bg-gradient-to-r from-gray-600/50 to-gray-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
+                <div className="relative rounded-2xl overflow-hidden border-2 border-gray-300 aspect-video bg-gray-100">
                   <img 
                     src={aboutImg} 
                     alt="О компании УралМет — поставщик трубного металлопроката в Екатеринбурге, трубы стальные купить, металлопрокат с доставкой по России, Казахстану, Узбекистану" 
@@ -173,16 +173,16 @@ export default function About() {
             </FadeIn>
 
             <FadeIn delay={200}>
-              <h2 className="text-3xl font-bold text-brand-white mb-6">
+              <h2 className="text-3xl font-bold text-brand-black mb-6">
                 Наши показатели
               </h2>
               <div className="grid grid-cols-2 gap-6">
                 {STATS.map((stat, index) => (
-                  <div key={index} className="card text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-brand-orange mb-2">
+                  <div key={index} className="card text-center bg-white border border-gray-100">
+                    <div className="text-3xl md:text-4xl font-bold text-gray-600 mb-2 group-hover:scale-110 transition-transform duration-300">
                       {stat.prefix}{stat.value.toLocaleString()}{stat.suffix}
                     </div>
-                    <div className="text-brand-white/70 text-sm">
+                    <div className="text-brand-black/70 text-sm">
                       {stat.label}
                     </div>
                   </div>
@@ -194,13 +194,13 @@ export default function About() {
       </section>
 
       {/* Контроль качества с фото */}
-      <section className="section bg-brand-black">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeIn>
               <div className="relative group order-2 md:order-1">
-                <div className="absolute -inset-2 bg-gradient-to-r from-brand-orange to-brand-orange/50 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
-                <div className="relative rounded-2xl overflow-hidden border-2 border-brand-orange/30 aspect-video">
+                <div className="absolute -inset-2 bg-gradient-to-r from-gray-600 to-gray-600/50 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
+                <div className="relative rounded-2xl overflow-hidden border-2 border-gray-300 aspect-video bg-gray-50">
                   <img 
                     src={qualityImg} 
                     alt="Контроль качества трубного металлопроката УралМет — трубы с сертификатом качества, металлопрокат Екатеринбург, лабораторные испытания, ГОСТ, ТУ" 
@@ -212,10 +212,10 @@ export default function About() {
             </FadeIn>
 
             <FadeIn delay={200} className="order-1 md:order-2">
-              <h2 className="text-3xl font-bold text-brand-white mb-6">
+              <h2 className="text-3xl font-bold text-brand-black mb-6">
                 Контроль качества
               </h2>
-              <div className="space-y-4 text-brand-white/70">
+              <div className="space-y-4 text-brand-black/70">
                 <p>
                   Вся продукция проходит многоступенчатый контроль качества. 
                   Собственная лаборатория оснащена современным испытательным оборудованием.
@@ -230,7 +230,7 @@ export default function About() {
                     'Сертификация по международным стандартам'
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="text-brand-orange text-lg" aria-hidden="true">✓</span>
+                      <span className="text-gray-600 text-lg" aria-hidden="true">✓</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -242,10 +242,10 @@ export default function About() {
       </section>
 
       {/* Преимущества — 6 карточек */}
-      <section className="section bg-brand-dark">
+      <section className="section bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-brand-white mb-12 text-center">
+            <h2 className="text-3xl font-bold text-brand-black mb-12 text-center">
               Наши преимущества
             </h2>
           </FadeIn>
@@ -254,14 +254,14 @@ export default function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {advantages.map((item, index) => (
               <FadeIn key={index} delay={index * 100}>
-                <div className="card group hover:scale-105 transition-transform duration-300 h-full">
+                <div className="card group hover:scale-105 transition-transform duration-300 h-full bg-white border border-gray-100">
                   <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-brand-white mb-3">
+                  <h3 className="text-lg font-bold text-brand-black mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-brand-white/70 text-sm">
+                  <p className="text-brand-black/70 text-sm">
                     {item.description}
                   </p>
                 </div>
@@ -272,10 +272,10 @@ export default function About() {
       </section>
 
       {/* Наши партнеры */}
-      <section className="section bg-brand-black">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-brand-white mb-12 text-center">
+            <h2 className="text-3xl font-bold text-brand-black mb-12 text-center">
               Наши партнеры
             </h2>
           </FadeIn>
@@ -283,7 +283,7 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {partners.map((partner, index) => (
               <FadeIn key={index} delay={index * 50}>
-                <div className="card h-32 flex items-center justify-center bg-white border border-brand-orange/20 p-6">
+                <div className="card h-32 flex items-center justify-center bg-gray-50 border border-gray-300 p-6">
                   <img 
                     src={partner.logo} 
                     alt={`${partner.fullName} — поставщик трубного металлопроката, трубы стальные, трубы электросварные и бесшовные ГОСТ, металлопрокат Екатеринбург`}
@@ -297,16 +297,16 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="section bg-brand-black">
+      <section className="section bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-brand-white mb-6">
+            <h2 className="text-3xl font-bold text-brand-black mb-6">
               Хотите узнать больше?
             </h2>
-            <p className="text-xl text-brand-white/70 mb-8">
+            <p className="text-xl text-brand-black/70 mb-8">
               Свяжитесь с нами для получения подробной информации
             </p>
-            <Link to="/contacts" className="btn-primary text-lg px-10 py-4">
+            <Link to="/contacts" className="btn-primary text-lg px-10 py-4 bg-gray-600 text-white hover:bg-gray-700">
               Связаться с нами
             </Link>
           </FadeIn>
@@ -314,18 +314,18 @@ export default function About() {
       </section>
 
       {/* ========== SEO-ТЕКСТ ДЛЯ ЯНДЕКС ========== */}
-      <section className="section bg-brand-dark border-t border-brand-orange/10">
+      <section className="section bg-white border-t border-gray-300">
         <div className="max-w-7xl mx-auto px-4 py-12">
           <FadeIn>
-            <div className="prose prose-invert max-w-none">
-              <h2 className="text-2xl font-bold text-white mb-6">
+            <div className="prose max-w-none">
+              <h2 className="text-2xl font-bold text-brand-black mb-6">
                 Трубный металлопрокат в Екатеринбурге от производителя УралМет
               </h2>
               
               {/* Контейнер с текстом и затенением */}
               <div className="relative">
                 <div 
-                  className={`text-brand-white/70 text-sm leading-relaxed space-y-4 transition-all duration-500 ${
+                  className={`text-brand-black/70 text-sm leading-relaxed space-y-4 transition-all duration-500 ${
                     isTextExpanded ? 'max-h-none' : 'max-h-40 overflow-hidden'
                   }`}
                 >
@@ -361,14 +361,14 @@ export default function About() {
   Трубы оптом от производителя, трубы в наличии на складе, трубы с доставкой Екатеринбург и Свердловская область. Трубы с сертификатом качества, металлопрокат отсрочка платежа, трубы ГОСТ Р 53383-2009, ТУ 24.20-001-44146124-2023 для свай — всё в одном месте.
 </p>
 
-<p className="text-brand-orange/80 font-medium">
+<p className="text-gray-600/80 font-medium">
   📞 Запросите прайс-лист: трубный металлопрокат Екатеринбург, трубы стальные купить, металлопрокат Екатеринбург, купить трубы Свердловская область, металлопрокат Урал доставка, трубы с доставкой Екатеринбург — звоните +7 (343) 123-45-67.
 </p>
                 </div>
                 
                 {/* Градиентное затенение снизу */}
                 {!isTextExpanded && (
-                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-brand-dark to-transparent pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none" />
                 )}
               </div>
               
@@ -376,7 +376,7 @@ export default function About() {
               <div className="mt-6 text-center">
                 <button
                   onClick={() => setIsTextExpanded(!isTextExpanded)}
-                  className="inline-flex items-center gap-2 text-white font-bold"
+                  className="inline-flex items-center gap-2 text-brand-black font-bold"
                 >
                   {isTextExpanded ? (
                     <>

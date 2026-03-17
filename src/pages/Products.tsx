@@ -92,13 +92,13 @@ export default function Products() {
   return (
     <div className="pt-20">
       {/* Hero секция */}
-      <section className="bg-brand-dark py-20">
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <h1 className="text-4xl md:text-6xl font-bold text-brand-white mb-6">
-              Продукция <span className="text-brand-orange">УралМет</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-brand-black mb-6">
+              Продукция <span className="text-gray-600">УралМет</span>
             </h1>
-            <p className="text-xl text-brand-white/70 max-w-3xl">
+            <p className="text-xl text-brand-black/70 max-w-3xl">
               Широкий сортамент трубной продукции и металлопроката 
               для нефтегазовой и строительной отраслей
             </p>
@@ -107,13 +107,13 @@ export default function Products() {
       </section>
 
       {/* Специализация */}
-      <section className="section bg-brand-black">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-brand-white mb-4 text-center">
+            <h2 className="text-3xl font-bold text-brand-black mb-4 text-center">
               Специализация компании
             </h2>
-            <p className="text-brand-white/70 text-center mb-12">
+            <p className="text-brand-black/70 text-center mb-12">
               Сортамент отгружаемой продукции
             </p>
           </FadeIn>
@@ -125,8 +125,8 @@ export default function Products() {
               onClick={() => setActiveCategory('all')}
               className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
                 activeCategory === 'all'
-                  ? 'bg-brand-orange text-white'
-                  : 'bg-brand-dark text-brand-white/70 hover:bg-brand-dark/80'
+                  ? 'bg-gray-600 text-white'
+                  : 'bg-gray-100 text-brand-black/70 hover:bg-gray-600 hover:text-white'
               }`}
             >
               Весь ассортимент
@@ -139,8 +139,8 @@ export default function Products() {
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
                   activeCategory === category.id
-                    ? 'bg-brand-orange text-white'
-                    : 'bg-brand-dark text-brand-white/70 hover:bg-brand-dark/80'
+                    ? 'bg-gray-600 text-white'
+                    : 'bg-gray-100 text-brand-black/70 hover:bg-gray-600 hover:text-white'
                 }`}
               >
                 {category.name}
@@ -150,7 +150,7 @@ export default function Products() {
 
           {/* Заголовок текущего раздела */}
           <FadeIn className="mb-6">
-            <h3 className="text-xl font-bold text-brand-white text-center">
+            <h3 className="text-xl font-bold text-brand-black text-center">
               {activeCategory === 'all' 
                 ? 'Весь ассортимент продукции' 
                 : categories.find(cat => cat.id === activeCategory)?.name}
@@ -161,19 +161,31 @@ export default function Products() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {displayedItems.map((item, index) => (
               <FadeIn key={index} delay={index * 50}>
-                <div className="card group hover:scale-105 transition-transform duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="w-3 h-3 bg-brand-orange rounded-full mt-2 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-base font-semibold text-brand-white mb-1">
-                        {item.name}
-                      </h3>
+                {/* Контейнер карточки с overflow-visible для тултипа */}
+                <div className="card group hover:scale-105 transition-transform duration-300 bg-white border border-gray-100 h-full flex flex-col overflow-visible">
+                  <div className="flex items-start gap-4 flex-1">
+                    {/* Фиксированный маркер */}
+                    <div className="w-3 h-3 bg-gray-600 rounded-full mt-2 flex-shrink-0" />
+                    <div className="flex-1 min-w-0">
+                      {/* Название товара с тултипом */}
+                      <div className="relative group/name inline-block">
+                        <h3 className="text-base font-semibold text-brand-black mb-1 line-clamp-2 cursor-help">
+                          {item.name}
+                        </h3>
+                        {/* Тултип — вынесен за пределы обрезки */}
+                        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-4 py-2.5 bg-brand-black text-white text-xs rounded-lg shadow-2xl opacity-0 group-hover/name:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-normal z-50 w-72 max-w-none">
+                          {item.name}
+                          {/* Стрелочка тултипа */}
+                          <div className="absolute top-full left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-brand-black transform rotate-45" />
+                        </div>
+                      </div>
+                      
                       {activeCategory === 'all' && (
-                        <p className="text-brand-orange/70 text-xs mb-2">
+                        <p className="text-gray-600/70 text-xs mb-2 line-clamp-1">
                           {item.category}
                         </p>
                       )}
-                      <Link to="/contacts" className="text-brand-orange text-sm font-semibold hover:underline">
+                      <Link to="/contacts" className="text-gray-600 text-sm font-semibold hover:underline inline-block mt-auto">
                         Узнать цену →
                       </Link>
                     </div>
@@ -186,16 +198,16 @@ export default function Products() {
       </section>
 
       {/* CTA */}
-      <section className="section bg-brand-dark">
+      <section className="section bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-brand-white mb-6">
+            <h2 className="text-3xl font-bold text-brand-black mb-6">
               Не нашли нужную позицию?
             </h2>
-            <p className="text-xl text-brand-white/70 mb-8">
+            <p className="text-xl text-brand-black/70 mb-8">
               Свяжитесь с нами, и мы подберём продукцию под ваши задачи
             </p>
-            <Link to="/contacts" className="btn-primary text-lg px-10 py-4 inline-block">
+            <Link to="/contacts" className="btn-primary text-lg px-10 py-4 inline-block bg-gray-600 text-white hover:bg-gray-700">
               Получить консультацию
             </Link>
           </FadeIn>
@@ -203,18 +215,18 @@ export default function Products() {
       </section>
 
       {/* ========== SEO-ТЕКСТ ДЛЯ ЯНДЕКС ========== */}
-      <section className="section bg-brand-dark border-t border-brand-orange/10">
+      <section className="section bg-white border-t border-gray-300">
         <div className="max-w-7xl mx-auto px-4 py-12">
           <FadeIn>
-            <div className="prose prose-invert max-w-none">
-              <h2 className="text-2xl font-bold text-white mb-6">
+            <div className="prose max-w-none">
+              <h2 className="text-2xl font-bold text-brand-black mb-6">
                 Продукция УралМет — трубный металлопрокат в Екатеринбурге
               </h2>
               
               {/* Контейнер с текстом и затенением */}
               <div className="relative">
                 <div 
-                  className={`text-brand-white/70 text-sm leading-relaxed space-y-4 transition-all duration-500 ${
+                  className={`text-brand-black/70 text-sm leading-relaxed space-y-4 transition-all duration-500 ${
                     isTextExpanded ? 'max-h-none' : 'max-h-40 overflow-hidden'
                   }`}
                 >
@@ -246,14 +258,14 @@ export default function Products() {
                     Трубы оптом от производителя, трубы в наличии на складе, трубы с доставкой Екатеринбург и Свердловская область. Купить трубы Свердловская область, металлопрокат Урал доставка в любой регион. Трубы с сертификатом качества, металлопрокат отсрочка платежа до 60 дней — выгодные условия для постоянных клиентов.
                   </p>
                   
-                  <p className="text-brand-orange/80 font-medium">
+                  <p className="text-gray-600/80 font-medium">
                     📞 Запросите прайс-лист: трубный металлопрокат Екатеринбург, трубы стальные купить, металлопрокат Екатеринбург, купить трубы Свердловская область, металлопрокат Урал доставка, трубы с доставкой Екатеринбург — звоните +7 (343) 123-45-67.
                   </p>
                 </div>
                 
                 {/* Градиентное затенение снизу */}
                 {!isTextExpanded && (
-                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-brand-dark to-transparent pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none" />
                 )}
               </div>
               
@@ -261,7 +273,7 @@ export default function Products() {
               <div className="mt-6 text-center">
                 <button
                   onClick={() => setIsTextExpanded(!isTextExpanded)}
-                  className="inline-flex items-center gap-2 text-white font-bold"
+                  className="inline-flex items-center gap-2 text-brand-black font-bold"
                 >
                   {isTextExpanded ? (
                     <>

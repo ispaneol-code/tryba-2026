@@ -11,13 +11,13 @@ export default function Certificates() {
   return (
     <div className="pt-20">
       {/* Hero секция */}
-      <section className="bg-brand-dark py-20">
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <h1 className="text-4xl md:text-6xl font-bold text-brand-white mb-6">
-              <span className="text-brand-orange">Сертификаты</span> и лицензии
+            <h1 className="text-4xl md:text-6xl font-bold text-brand-black mb-6">
+              <span className="text-gray-600">Сертификаты</span> и лицензии
             </h1>
-            <p className="text-xl text-brand-white/70 max-w-3xl">
+            <p className="text-xl text-brand-black/70 max-w-3xl">
               Вся продукция УралМет сертифицирована и соответствует требованиям 
               российских и международных стандартов качества
             </p>
@@ -26,18 +26,18 @@ export default function Certificates() {
       </section>
 
       {/* Сертификаты соответствия */}
-      <section className="section bg-brand-black">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-brand-white mb-12 text-center">
+            <h2 className="text-3xl font-bold text-brand-black mb-12 text-center">
               Сертификаты соответствия
             </h2>
           </FadeIn>
           
           <div className="max-w-3xl mx-auto">
             <FadeIn delay={100}>
-              <div className="card group hover:scale-105 transition-transform duration-300">
-                <div className="rounded-lg overflow-hidden border border-brand-orange/20 bg-brand-dark mb-4 p-4">
+              <div className="card group hover:scale-105 transition-transform duration-300 bg-white border border-gray-100">
+                <div className="rounded-lg overflow-hidden border border-gray-300 bg-gray-50 mb-4 p-4">
                   <img 
                     src={certificateImg} 
                     alt="Сертификат соответствия ГОСТ на трубный металлопрокат УралМет Екатеринбург — трубы стальные, трубы электросварные, трубы бесшовные с документами качества, разрешения Ростехнадзора" 
@@ -45,10 +45,10 @@ export default function Certificates() {
                     loading="lazy"
                   />
                 </div>
-                <h3 className="text-lg font-bold text-brand-white mb-2 text-center">
+                <h3 className="text-lg font-bold text-brand-black mb-2 text-center">
                   Сертификат соответствия
                 </h3>
-                <p className="text-brand-white/60 text-sm text-center">
+                <p className="text-brand-black/60 text-sm text-center">
                   Система менеджмента качества
                 </p>
               </div>
@@ -58,10 +58,10 @@ export default function Certificates() {
       </section>
 
       {/* Список сертификатов */}
-      <section className="section bg-brand-dark">
+      <section className="section bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-brand-white mb-12">
+            <h2 className="text-3xl font-bold text-brand-black mb-12">
               Наши сертификаты и лицензии
             </h2>
           </FadeIn>
@@ -80,9 +80,9 @@ export default function Certificates() {
               'Заключение по результатам экспертизы промышленной безопасности'
             ].map((item, index) => (
               <FadeIn key={index} delay={index * 50}>
-                <div className="flex items-start gap-4 p-4 border-l-2 border-brand-orange bg-brand-black/50">
-                  <div className="text-brand-orange text-2xl">✓</div>
-                  <div className="text-brand-white/80">{item}</div>
+                <div className="flex items-start gap-4 p-4 border-l-2 border-gray-600 bg-white">
+                  <div className="text-gray-600 text-2xl">✓</div>
+                  <div className="text-brand-black/80">{item}</div>
                 </div>
               </FadeIn>
             ))}
@@ -91,16 +91,16 @@ export default function Certificates() {
       </section>
 
       {/* CTA */}
-      <section className="section bg-brand-black">
+      <section className="section bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-brand-white mb-6">
+            <h2 className="text-3xl font-bold text-brand-black mb-6">
               Нужны копии сертификатов?
             </h2>
-            <p className="text-xl text-brand-white/70 mb-8">
+            <p className="text-xl text-brand-black/70 mb-8">
               Запросите полный пакет документов у наших специалистов
             </p>
-            <Link to="/contacts" className="btn-primary text-lg px-10 py-4">
+            <Link to="/contacts" className="btn-primary text-lg px-10 py-4 bg-gray-600 text-white hover:bg-gray-700">
               Запросить документы
             </Link>
           </FadeIn>
@@ -108,18 +108,18 @@ export default function Certificates() {
       </section>
 
       {/* ========== SEO-ТЕКСТ ДЛЯ ЯНДЕКС ========== */}
-      <section className="section bg-brand-dark border-t border-brand-orange/10">
+      <section className="section bg-gray-50 border-t border-gray-300">
         <div className="max-w-7xl mx-auto px-4 py-12">
           <FadeIn>
-            <div className="prose prose-invert max-w-none">
-              <h2 className="text-2xl font-bold text-white mb-6">
+            <div className="prose max-w-none">
+              <h2 className="text-2xl font-bold text-brand-black mb-6">
                 Сертификаты на трубный металлопрокат в Екатеринбурге — УралМет
               </h2>
               
               {/* Контейнер с текстом и затенением */}
               <div className="relative">
                 <div 
-                  className={`text-brand-white/70 text-sm leading-relaxed space-y-4 transition-all duration-500 ${
+                  className={`text-brand-black/70 text-sm leading-relaxed space-y-4 transition-all duration-500 ${
                     isTextExpanded ? 'max-h-none' : 'max-h-40 overflow-hidden'
                   }`}
                 >
@@ -155,14 +155,14 @@ export default function Certificates() {
                     Трубы оптом от производителя с сертификатами, трубы в наличии на складе с документами, трубы с доставкой Екатеринбург и Свердловская область. Трубы с сертификатом качества ГОСТ, металлопрокат отсрочка платежа, трубы ГОСТ Р 53383-2009, ТУ 24.20-001-44146124-2023 для свай — всё с разрешительной документацией.
                   </p>
                   
-                  <p className="text-brand-orange/80 font-medium">
+                  <p className="text-gray-600/80 font-medium">
                     📞 Запросите сертификаты: трубный металлопрокат Екатеринбург, трубы стальные купить с документами, металлопрокат Екатеринбург, купить трубы Свердловская область, металлопрокат Урал доставка с сертификатами — звоните +7 (343) 123-45-67.
                   </p>
                 </div>
                 
                 {/* Градиентное затенение снизу */}
                 {!isTextExpanded && (
-                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-brand-dark to-transparent pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-50 to-transparent pointer-events-none" />
                 )}
               </div>
               
@@ -170,19 +170,19 @@ export default function Certificates() {
               <div className="mt-6 text-center">
                 <button
                   onClick={() => setIsTextExpanded(!isTextExpanded)}
-                  className="inline-flex items-center gap-2 text-white font-bold"
+                  className="inline-flex items-center gap-2 text-brand-black font-bold"
                 >
                   {isTextExpanded ? (
                     <>
                       <span>Свернуть</span>
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                       </svg>
                     </>
                   ) : (
                     <>
                       <span>Читать далее</span>
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </>
