@@ -26,13 +26,13 @@ export default function Contacts() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="bg-brand-dark py-20">
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <h1 className="text-4xl md:text-6xl font-bold text-brand-white mb-6">
-              <span className="text-brand-orange">Контакты</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-brand-black mb-6">
+              <span className="text-gray-600">Контакты</span>
             </h1>
-            <p className="text-xl text-brand-white/70 max-w-3xl">
+            <p className="text-xl text-brand-black/70 max-w-3xl">
               Свяжитесь с нами для консультации, расчёта стоимости или оформления заказа
             </p>
           </FadeIn>
@@ -40,23 +40,23 @@ export default function Contacts() {
       </section>
 
       {/* Контакты + Форма */}
-      <section className="section bg-brand-black">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Контактная информация */}
             <FadeIn>
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-2xl font-bold text-brand-white mb-6">
+                  <h2 className="text-2xl font-bold text-brand-black mb-6">
                     Связаться с нами
                   </h2>
                   
                   <div className="space-y-4">
                     <div className="flex items-start gap-4">
-                      <span className="text-brand-orange text-2xl">📍</span>
+                      <span className="text-gray-600 text-2xl" aria-hidden="true">📍</span>
                       <div>
-                        <div className="text-brand-white font-semibold">Юридический адрес</div>
-                        <div className="text-brand-white/70">
+                        <div className="text-brand-black font-semibold">Юридический адрес</div>
+                        <div className="text-brand-black/70">
                           620110, Свердловская область, г. Екатеринбург,<br />
                           ул. Краснолесья стр.12А, оф.642
                         </div>
@@ -64,34 +64,34 @@ export default function Contacts() {
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <span className="text-brand-orange text-2xl">📞</span>
+                      <span className="text-gray-600 text-2xl" aria-hidden="true">📞</span>
                       <div>
-                        <div className="text-brand-white font-semibold">Телефон</div>
-                        <a href="tel:+73431234567" className="text-brand-white/70 hover:text-brand-orange transition-colors">
+                        <div className="text-brand-black font-semibold">Телефон</div>
+                        <a href="tel:+73431234567" className="text-brand-black/70 hover:text-gray-600 transition-colors">
                           +7 (343) 123-45-67
                         </a>
-                        <div className="text-brand-white/50 text-sm">Екатеринбург</div>
+                        <div className="text-brand-black/50 text-sm">Екатеринбург</div>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <span className="text-brand-orange text-2xl">✉️</span>
+                      <span className="text-gray-600 text-2xl" aria-hidden="true">✉️</span>
                       <div>
-                        <div className="text-brand-white font-semibold">Email</div>
-                        <a href="mailto:info@uralmet.ru" className="text-brand-white/70 hover:text-brand-orange transition-colors">
+                        <div className="text-brand-black font-semibold">Email</div>
+                        <a href="mailto:info@uralmet.ru" className="text-brand-black/70 hover:text-gray-600 transition-colors">
                           info@uralmet.ru
                         </a>
-                        <div className="text-brand-white/70">
+                        <div className="text-brand-black/70">
                           sales@uralmet.ru — отдел продаж
                         </div>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <span className="text-brand-orange text-2xl">🕐</span>
+                      <span className="text-gray-600 text-2xl" aria-hidden="true">🕐</span>
                       <div>
-                        <div className="text-brand-white font-semibold">Режим работы</div>
-                        <div className="text-brand-white/70">
+                        <div className="text-brand-black font-semibold">Режим работы</div>
+                        <div className="text-brand-black/70">
                           Пн-Пт: 09:00 - 18:00 (ЕКБ)<br />
                           Сб-Вс: выходные
                         </div>
@@ -101,34 +101,34 @@ export default function Contacts() {
                 </div>
 
                 {/* Реквизиты */}
-                <div className="p-6 bg-brand-dark rounded-xl">
-                  <h3 className="text-lg font-bold text-brand-white mb-4">
+                <div className="p-6 bg-gray-50 rounded-xl border border-gray-300">
+                  <h3 className="text-lg font-bold text-brand-black mb-4">
                     Реквизиты компании
                   </h3>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-brand-white/60">Наименование</span>
-                      <span className="text-brand-white">ООО «УралМет»</span>
+                      <span className="text-brand-black/60">Наименование</span>
+                      <span className="text-brand-black">ООО «УралМет»</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-brand-white/60">Полное наименование</span>
-                      <span className="text-brand-white text-right ml-4">Общество с ограниченной ответственностью «УралМет»</span>
+                      <span className="text-brand-black/60">Полное наименование</span>
+                      <span className="text-brand-black text-right ml-4">Общество с ограниченной ответственностью «УралМет»</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-brand-white/60">ИНН/КПП</span>
-                      <span className="text-brand-white">6679058883 / 667101001</span>
+                      <span className="text-brand-black/60">ИНН/КПП</span>
+                      <span className="text-brand-black">6679058883 / 667101001</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-brand-white/60">ОГРН</span>
-                      <span className="text-brand-white">1146679030520</span>
+                      <span className="text-brand-black/60">ОГРН</span>
+                      <span className="text-brand-black">1146679030520</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-brand-white/60">ОКПО</span>
-                      <span className="text-brand-white">44146124</span>
+                      <span className="text-brand-black/60">ОКПО</span>
+                      <span className="text-brand-black">44146124</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-brand-white/60">ОКАТО</span>
-                      <span className="text-brand-white">65401390000</span>
+                      <span className="text-brand-black/60">ОКАТО</span>
+                      <span className="text-brand-black">65401390000</span>
                     </div>
                   </div>
                 </div>
@@ -137,14 +137,14 @@ export default function Contacts() {
 
             {/* Форма заявки */}
             <FadeIn delay={200}>
-              <form onSubmit={handleSubmit} className="card">
-                <h2 className="text-2xl font-bold text-brand-white mb-6">
+              <form onSubmit={handleSubmit} className="card bg-white border border-gray-300 p-6 rounded-xl">
+                <h2 className="text-2xl font-bold text-brand-black mb-6">
                   Оставить заявку
                 </h2>
                 
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-brand-white/70 text-sm mb-2">
+                    <label className="block text-brand-black/70 text-sm mb-2">
                       Ваше имя *
                     </label>
                     <input
@@ -153,13 +153,13 @@ export default function Contacts() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-brand-black border border-brand-white/20 rounded-lg text-brand-white placeholder-brand-white/40 focus:outline-none focus:border-brand-orange transition-colors"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-brand-black placeholder-brand-black/40 focus:outline-none focus:border-gray-600 transition-colors"
                       placeholder="Иван Иванов"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-brand-white/70 text-sm mb-2">
+                    <label className="block text-brand-black/70 text-sm mb-2">
                       Компания
                     </label>
                     <input
@@ -167,14 +167,14 @@ export default function Contacts() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-brand-black border border-brand-white/20 rounded-lg text-brand-white placeholder-brand-white/40 focus:outline-none focus:border-brand-orange transition-colors"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-brand-black placeholder-brand-black/40 focus:outline-none focus:border-gray-600 transition-colors"
                       placeholder="ООО «Пример»"
                     />
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-brand-white/70 text-sm mb-2">
+                      <label className="block text-brand-black/70 text-sm mb-2">
                         Телефон *
                       </label>
                       <input
@@ -183,12 +183,12 @@ export default function Contacts() {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-brand-black border border-brand-white/20 rounded-lg text-brand-white placeholder-brand-white/40 focus:outline-none focus:border-brand-orange transition-colors"
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-brand-black placeholder-brand-black/40 focus:outline-none focus:border-gray-600 transition-colors"
                         placeholder="+7 (___) ___-__-__"
                       />
                     </div>
                     <div>
-                      <label className="block text-brand-white/70 text-sm mb-2">
+                      <label className="block text-brand-black/70 text-sm mb-2">
                         Email
                       </label>
                       <input
@@ -196,14 +196,14 @@ export default function Contacts() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-brand-black border border-brand-white/20 rounded-lg text-brand-white placeholder-brand-white/40 focus:outline-none focus:border-brand-orange transition-colors"
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-brand-black placeholder-brand-black/40 focus:outline-none focus:border-gray-600 transition-colors"
                         placeholder="email@example.com"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-brand-white/70 text-sm mb-2">
+                    <label className="block text-brand-black/70 text-sm mb-2">
                       Сообщение *
                     </label>
                     <textarea
@@ -212,19 +212,19 @@ export default function Contacts() {
                       onChange={handleChange}
                       required
                       rows={4}
-                      className="w-full px-4 py-3 bg-brand-black border border-brand-white/20 rounded-lg text-brand-white placeholder-brand-white/40 focus:outline-none focus:border-brand-orange transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-brand-black placeholder-brand-black/40 focus:outline-none focus:border-gray-600 transition-colors resize-none"
                       placeholder="Опишите ваш запрос..."
                     />
                   </div>
 
                   <button 
                     type="submit" 
-                    className="btn-primary w-full py-4 text-lg font-semibold"
+                    className="btn-primary w-full py-4 text-lg font-semibold bg-gray-600 text-white hover:bg-gray-700"
                   >
                     Отправить заявку
                   </button>
 
-                  <p className="text-brand-white/40 text-xs text-center">
+                  <p className="text-brand-black/40 text-xs text-center">
                     Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
                   </p>
                 </div>
@@ -235,51 +235,51 @@ export default function Contacts() {
       </section>
 
       {/* Карта */}
-      <section className="section bg-brand-dark">
+      <section className="section bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-brand-white mb-12 text-center w-full">
+            <h2 className="text-3xl font-bold text-brand-black mb-12 text-center w-full">
               Как до нас добраться
             </h2>
             
             <div className="grid lg:grid-cols-3 gap-6">
               {/* Информация + Фото */}
               <div className="lg:col-span-1 space-y-4">
-                <div className="card">
-                  <h3 className="text-lg font-bold text-brand-white mb-4">
+                <div className="card bg-white border border-gray-300 p-6">
+                  <h3 className="text-lg font-bold text-brand-black mb-4">
                     Адрес офиса
                   </h3>
-                  <div className="space-y-3 text-brand-white/70">
+                  <div className="space-y-3 text-brand-black/70">
                     <div className="flex items-start gap-3">
-                      <span className="text-brand-orange text-xl">📍</span>
+                      <span className="text-gray-600 text-xl" aria-hidden="true">📍</span>
                       <div>
-                        <div className="font-semibold text-brand-white">
+                        <div className="font-semibold text-brand-black">
                           г. Екатеринбург
                         </div>
                         <div>ул. Краснолесья стр.12А, оф.642</div>
-                        <div className="text-sm text-brand-white/50">
+                        <div className="text-sm text-brand-black/50">
                           Индекс: 620110
                         </div>
                       </div>
                     </div>
                     
                     <div className="flex items-start gap-3">
-                      <span className="text-brand-orange text-xl">🚇</span>
+                      <span className="text-gray-600 text-xl" aria-hidden="true">🚇</span>
                       <div>
-                        <div className="font-semibold text-brand-white">
+                        <div className="font-semibold text-brand-black">
                           Ближайшее метро
                         </div>
                         <div>Чкаловская (15 мин на такси)</div>
-                        <div className="text-sm text-brand-white/50">
+                        <div className="text-sm text-brand-black/50">
                           Геологическая (20 мин на такси)
                         </div>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <span className="text-brand-orange text-xl">🚗</span>
+                      <span className="text-gray-600 text-xl" aria-hidden="true">🚗</span>
                       <div>
-                        <div className="font-semibold text-brand-white">
+                        <div className="font-semibold text-brand-black">
                           Парковка
                         </div>
                         <div>Гостевая парковка на территории</div>
@@ -289,10 +289,10 @@ export default function Contacts() {
                 </div>
 
                 {/* Фото офиса */}
-                <div className="rounded-xl overflow-hidden border-2 border-brand-orange/30">
+                <div className="rounded-xl overflow-hidden border-2 border-gray-300 bg-gray-100">
                   <img 
                     src={officeImg} 
-                    alt="Офис УралМет" 
+                    alt="Офис УралМет в Екатеринбурге — ул. Краснолесья, контактный центр, приём заявок на трубный металлопрокат" 
                     className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -302,14 +302,14 @@ export default function Contacts() {
                   href="https://yandex.ru/maps/-/CDU~vZqK"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary w-full text-center block"
+                  className="btn-primary w-full text-center block bg-gray-600 text-white hover:bg-gray-700"
                 >
                   Построить маршрут →
                 </a>
               </div>
 
               {/* Карта */}
-              <div className="lg:col-span-2 rounded-xl overflow-hidden border-2 border-brand-orange/30 shadow-2xl h-[600px]">
+              <div className="lg:col-span-2 rounded-xl overflow-hidden border-2 border-gray-300 shadow-2xl h-[600px] bg-gray-100">
                 <iframe
                   src="https://yandex.ru/map-widget/v1/?ll=60.547869%2C56.779338&z=17&pt=60.547869,56.779338,pm2rdm&l=map"
                   className="w-full h-full"
